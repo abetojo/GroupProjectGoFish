@@ -13,6 +13,7 @@ import java.util.ArrayList;
  *
  * @author dancye
  * @author Paul Bonenfant Jan 2020
+ * Edditor Matteo Piraino
  */
 public abstract class Game {
 
@@ -54,5 +55,6 @@ public abstract class Game {
      * When the game is over, use this method to declare and display a winning player.
      */
     public abstract void declareWinner();
+
 
 }//end class
