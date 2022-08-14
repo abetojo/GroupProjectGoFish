@@ -8,7 +8,8 @@ package GoFishPackage;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Player {
+public class Player extends Deck{
+
     
     private String name;
     private ArrayList<String> hand;
@@ -78,6 +79,7 @@ public class Player {
     }
 
     public String goFish() {
+        String card = pullCard();
         return  "";
     }
 }
