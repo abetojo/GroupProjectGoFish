@@ -26,55 +26,54 @@ public class Deck {
     }
     
     public void buildDeck(){
+        deck = new ArrayList<String>();
+        System.out.println("Building the deck");
 
-    System.out.println("Building the deck");
-
-    for(int i = 1; i <=52; i++){
-
-        if(i <= 4){
-            deck.add("Ace");
+        for(int i = 0; i <=52; i++){
+            if(i <= 4){
+                this.deck.add("Ace");
+            }
+            else if(i <= 8){
+                this.deck.add("Two");
+            }
+            else if(i <= 12){
+                this.deck.add("Three");
+            }
+            else if(i <= 16){
+                this.deck.add("Four");
+            }
+            else if(i <= 20){
+                this.deck.add("Five");
+            }
+            else if(i <= 24){
+                this.deck.add("Six");
+            }
+            else if(i <= 28){
+                this.deck.add("Seven");
+            }
+            else if(i <= 32){
+                this.deck.add("Eight");
+            }
+            else if(i <= 36){
+                this.deck.add("Nine");
+            }
+            else if(i <= 40){
+                this.deck.add("Ten");
+            }
+            else if(i <= 44){
+                this.deck.add("Jack");
+            }
+            else if(i <= 48){
+                this.deck.add("Queen");
+            }
+            else if(i <= 52){
+                this.deck.add("King");
+            }
+            else{
+                System.out.println("The Deck has been made");
+            }
+            }
         }
-        else if(i <= 8){
-            deck.add("Two");
-        }
-        else if(i <= 12){
-            deck.add("Three");
-        }
-        else if(i <= 16){
-            deck.add("Four");
-        }
-        else if(i <= 20){
-            deck.add("Five");
-        }
-        else if(i <= 24){
-            deck.add("Six");
-        }
-        else if(i <= 28){
-            deck.add("Seven");
-        }
-        else if(i <= 32){
-        deck.add("Eight");
-        }
-        else if(i <= 36){
-            deck.add("Nine");
-        }
-        else if(i <= 40){
-            deck.add("Ten");
-        }
-        else if(i <= 44){
-            deck.add("Jack");
-        }
-        else if(i <= 48){
-            deck.add("Queen");
-        }
-        else if(i <= 52){
-            deck.add("King");
-        }
-        else{
-            System.out.println("The Deck has been made");
-        }
-        }
-    }
     
     public void newDeck() {
         deck.clear();
