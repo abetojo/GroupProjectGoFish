@@ -68,8 +68,13 @@ public class Player {
         return card;
     }
 
-    public String giveCard(String cardNum) {
-        return cardNum;
+    public String giveCard(String card) {
+        if (this.getHand().contains(card)) {
+            return card;
+        }
+        else {
+            return "You must Go Fish";
+        }
     }
 
     public String goFish() {
