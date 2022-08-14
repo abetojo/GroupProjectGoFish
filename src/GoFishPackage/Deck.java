@@ -75,6 +75,11 @@ public class Deck {
         }
         }
     }
+    
+    public void newDeck() {
+        deck.clear();
+        buildDeck();
+    }
 
     public String pullCard(){
         String card = deck.get(0);
