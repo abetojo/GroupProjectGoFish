@@ -20,13 +20,22 @@ public abstract class GoFish {
     }
 
     public ArrayList<Player> getPlayer() {
+        
         return player;
     }
 
     public void setPlayer(ArrayList<Player> player) {
         this.player = player;
     }
-
+    
+    public ArrayList<Player> makePlayerList() {
+        Player user = new Player();
+        Player cpu = new Player();
+        player.add(user);
+        player.add(cpu);
+        return player;
+    }
+    
     public ArrayList<String> shuffle(ArrayList<String> deck) {
         System.out.println("Shuffling the deck");
         Collections.shuffle(deck);
