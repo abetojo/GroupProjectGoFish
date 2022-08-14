@@ -26,6 +26,8 @@ public class Deck {
     }
 
     public String pullCard(){
-        return "";
+        String card = deck[0];
+        deck.remove(0);
+        return card;
     }
 }
