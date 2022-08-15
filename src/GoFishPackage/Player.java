@@ -80,6 +80,6 @@ public class Player extends Deck{
 
     public String goFish() {
         String card = pullCard();
-        return  "";
+        return card;
     }
 }
