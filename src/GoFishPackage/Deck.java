@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class Deck {
     
-    private ArrayList<String> deck;
+    protected ArrayList<String> deck;
 
     public Deck(){}
 
