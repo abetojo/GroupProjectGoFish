@@ -11,35 +11,15 @@ import java.util.Collections;
 public abstract class GoFish extends Player {
 
     public static void main(String[] args) {
-        
+        Deck deck = new Deck();
+        Player user = new Player();
+        Player cpu = new Player();
+
     }
-    
-    private ArrayList<Player> player;
 
     public GoFish() {
     }
-
-    public GoFish(ArrayList<Player> player) {
-        setPlayer(player);
-    }
-
-    public ArrayList<Player> getPlayer() {
-        
-        return player;
-    }
-
-    public void setPlayer(ArrayList<Player> player) {
-        this.player = player;
-    }
-    
-    public ArrayList<Player> makePlayerList() {
-        Player user = new Player();
-        Player cpu = new Player();
-        player.add(user);
-        player.add(cpu);
-        return player;
-    }
-    
+      
     public ArrayList<String> shuffle(ArrayList<String> deck) {
         System.out.println("Shuffling the deck");
         Collections.shuffle(deck);
@@ -48,8 +28,15 @@ public abstract class GoFish extends Player {
     }
 
     public void nextTurn() {
-
+        //TODO===========================
     }
 
-    public abstract void declareWinner() ;
+    public Player declareWinner(Player user, Player cpu) {
+        if(goFish() == null) {
+            if(user.getNumSets() > cpu.getNumSets()) {
+                return user;
+            }
+        }
+        return cpu;
+    }
 }
