@@ -61,6 +61,15 @@ public class Player extends Deck{
     public void setNumSets(int numSets) {
         this.numSets = numSets;
     }
+    public void setOpeningHand(ArrayList<String> hand) {
+       for(int i = 0; i <= 7; i++ ){
+
+       String card = deck.get(i);
+       deck.remove(i);
+       hand.add(card);
+
+       }
+    }
 
     public String askForCard() {
         Scanner scanner = new Scanner(System.in);
