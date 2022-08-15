@@ -8,8 +8,12 @@ package GoFishPackage;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public abstract class GoFish {
+public abstract class GoFish extends Player {
 
+    public static void main(String[] args) {
+        
+    }
+    
     private ArrayList<Player> player;
 
     public GoFish() {
@@ -47,5 +51,5 @@ public abstract class GoFish {
 
     }
 
-    public abstract void declareWinner();
+    public abstract void declareWinner() ;
 }
