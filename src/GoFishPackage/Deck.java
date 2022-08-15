@@ -81,8 +81,12 @@ public class Deck {
     }
 
     public String pullCard(){
-        String card = deck.get(0);
-        deck.remove(0);
-        return card;
+        if (deck.get(0) != null) {
+            String card = deck.get(0);
+            deck.remove(0);
+            return card;
+        }
+        System.out.println("No cards left in the Deck");
+        return null;
     };
 }
