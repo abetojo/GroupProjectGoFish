@@ -2,7 +2,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-
 package GoFishPackage;
 
 import java.util.ArrayList;
@@ -10,16 +9,9 @@ import java.util.Collections;
 
 public abstract class GoFish extends Player {
 
-    public static void main(String[] args) {
-        Deck deck = new Deck();
-        Player user = new Player();
-        Player cpu = new Player();
-
-    }
-
     public GoFish() {
     }
-      
+
     public ArrayList<String> shuffle(ArrayList<String> deck) {
         System.out.println("Shuffling the deck");
         Collections.shuffle(deck);
@@ -28,12 +20,12 @@ public abstract class GoFish extends Player {
     }
 
     public void nextTurn() {
-        //TODO===========================
+        // TODO===========================
     }
 
     public Player declareWinner(Player user, Player cpu) {
-        if(goFish() == null) {
-            if(user.getNumSets() > cpu.getNumSets()) {
+        if (goFish() == null) {
+            if (user.getNumSets() > cpu.getNumSets()) {
                 return user;
             }
         }
