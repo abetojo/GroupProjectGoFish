@@ -5,6 +5,7 @@
 package GoFishPackage;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Deck {
 
@@ -62,6 +63,13 @@ public class Deck {
                 break;
             }
         }
+    }
+
+    public ArrayList<String> shuffle() {
+        System.out.println("Shuffling the deck");
+        Collections.shuffle(this.deck);
+        System.out.println("Deck has been shuffled");
+        return deck;
     }
 
     public void newDeck() {

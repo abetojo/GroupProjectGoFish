@@ -20,6 +20,7 @@ public class Driver {
 
         //System builds the cards
         deck.buildDeck();
+        deck.shuffle();
         
         //Asks user for their name
         String userName = getString(input, "Enter your name: ");

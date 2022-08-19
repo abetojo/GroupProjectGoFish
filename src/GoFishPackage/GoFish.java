@@ -12,13 +12,6 @@ public abstract class GoFish extends Player {
     public GoFish() {
     }
 
-    public ArrayList<String> shuffle(ArrayList<String> deck) {
-        System.out.println("Shuffling the deck");
-        Collections.shuffle(deck);
-        System.out.println("Deck has been shuffled");
-        return deck;
-    }
-
     public void nextTurn() {
         // TODO===========================
     }
