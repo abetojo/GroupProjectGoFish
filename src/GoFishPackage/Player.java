@@ -5,6 +5,7 @@
 package GoFishPackage;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -50,7 +51,7 @@ public class Player extends Deck {
         this.cardNum = cardNum;
     }
 
-    public String setOfFour(String card) {
+    public void setOfFour(String card) {
         int setTracker = 0;
         for(int i = 0; i < hand.size(); i++) {
             if(card.equals(hand.get(i))) {
@@ -58,10 +59,10 @@ public class Player extends Deck {
             }
         }
         if(setTracker == 4) {
-            return card;
-        }
-        else {
-            return null;
+            hand.removeAll(Collections.singleton(card));
+            numSets++;
+            System.out.println("You have a set of 4!");
+            System.out.println("You have " + numSets + " sets.");
         }
     }
 

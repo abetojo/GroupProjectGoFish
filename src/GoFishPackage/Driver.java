@@ -45,6 +45,7 @@ public class Driver {
                     String newUserCard = cpu.giveCard(card);
                     if(newUserCard != null) {
                         user.getHand().add(newUserCard);
+                        user.setOfFour(newUserCard);
                     }
                     System.out.println("CPU HAND:" + cpu.getHand());
                     System.out.println("YOUR HAND:" + user.getHand() + "\n");
@@ -60,6 +61,8 @@ public class Driver {
             user.getHand().add(newCard);
             System.out.println("An " + newCard + " Card has been added to your hand");
             System.out.println("YOUR NEW HAND:" + user.getHand() + "\n");
+
+            user.setOfFour(newCard);
         }
 
         hadCard = 0;
@@ -72,7 +75,8 @@ public class Driver {
                 System.out.println("you had the card! A " + card + " card has been added to thier hand");
                 String newCpuCard = user.giveCard(card2);
                 if(newCpuCard != null) {
-                    user.getHand().add(newCpuCard);
+                    cpu.getHand().add(newCpuCard);
+                    cpu.setOfFour(newCpuCard);
                 }
                 System.out.println("CPU HAND:" + cpu.getHand());
                 System.out.println("YOUR HAND:" + user.getHand());
@@ -88,6 +92,7 @@ public class Driver {
             System.out.println("A " + newCard + " Card has been added to the cpu's hand");
             // test to show the cpu hand while in development
             System.out.println("Cpu hand is :" + cpu.getHand());
+            cpu.setOfFour(newCard);
         }
         hadCard = 0;
         }
