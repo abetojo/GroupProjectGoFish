@@ -43,28 +43,56 @@ public class Driver {
                 if(card.equals(cpu.getHand().get(i))) {
                     System.out.println("They had the card! A " + card + " card has been added to your hand");
                     String newUserCard = cpu.giveCard(card);
-                    user.getHand().add(newUserCard);
+                    if(newUserCard != null) {
+                        user.getHand().add(newUserCard);
+                    }
                     System.out.println("CPU HAND:" + cpu.getHand());
-                    System.out.println("YOUR HAND:" + user.getHand());
+                    System.out.println("YOUR HAND:" + user.getHand() + "\n");
                     hadCard = 1;
                     break;
                 } 
             }
-            
+
         if(hadCard == 0) {
             System.out.println("The CPU doesn't have the card, you need to go Fish!");
             String newCard = user.goFish(deck);
             deck.getDeck().remove(0);
             user.getHand().add(newCard);
             System.out.println("An " + newCard + " Card has been added to your hand");
-            System.out.println("YOUR NEW HAND:" + user.getHand());
+            System.out.println("YOUR NEW HAND:" + user.getHand() + "\n");
+        }
+
+        hadCard = 0;
+
+        // Cpu half of the turn
+        System.out.println("The Cpu will now ask you for a card");
+        String card2 = cpu.askUserForCard();
+        for (int i = 0; i < cpu.getHand().size(); i++) {
+            if (card.equals(cpu.getHand().get(i))) {
+                System.out.println("you had the card! A " + card + " card has been added to thier hand");
+                String newCpuCard = user.giveCard(card2);
+                if(newCpuCard != null) {
+                    user.getHand().add(newCpuCard);
+                }
+                System.out.println("CPU HAND:" + cpu.getHand());
+                System.out.println("YOUR HAND:" + user.getHand());
+                hadCard = 1;
+                break;
+            }
+        }
+        if (hadCard == 0) {
+            System.out.println("You do not have their card, they need to go Fish!");
+            String newCard = cpu.goFish(deck);
+            deck.getDeck().remove(0);
+            cpu.getHand().add(newCard);
+            System.out.println("A " + newCard + " Card has been added to the cpu's hand");
+            // test to show the cpu hand while in development
+            System.out.println("Cpu hand is :" + cpu.getHand());
         }
         hadCard = 0;
+        }
         
-
-
-
-        }   
+        
     }
 
     public static String getString(Scanner sc, String prompt) {

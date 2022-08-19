@@ -5,6 +5,7 @@
 package GoFishPackage;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Player extends Deck {
@@ -94,11 +95,18 @@ public class Player extends Deck {
             this.getHand().remove(index);
             return card;
         }
-        return "Card not in hand!";
+        return null;
     }
 
     public String goFish(Deck deck) {
         String card = deck.getDeck().get(0);
         return card;
+    }
+
+    public String askUserForCard() {
+        Random rnd = new Random();
+        int index = rnd.nextInt(this.hand.size());
+        String card2 = this.hand.get(index);
+        return card2;
     }
 }
