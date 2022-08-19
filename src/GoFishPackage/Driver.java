@@ -14,7 +14,6 @@ public class Driver {
         Deck deck = new Deck(); // Object for the Deck
         Player user = new Player(); // Object for User
         Player cpu = new Player(); // Object for CPU
-        GoFish fish = new GoFish() {}; // Object for GoFish
         
         Scanner input = new Scanner(System.in);
 
@@ -70,9 +69,10 @@ public class Driver {
         // Cpu half of the turn
         System.out.println("The Cpu will now ask you for a card");
         String card2 = cpu.askUserForCard();
+        System.out.println("Card 2 grabbed is: " + card2);
         for (int i = 0; i < cpu.getHand().size(); i++) {
-            if (card2.equals(cpu.getHand().get(i))) {
-                System.out.println("You had the card! A " + card2 + " card has been added to thier hand");
+            if (card2.equals(user.getHand().get(i))) {
+                System.out.println("You had the card! A " + card2 + " card has been added to their hand");
                 String newCpuCard = user.giveCard(card2);
                 if(newCpuCard != null) {
                     cpu.getHand().add(newCpuCard);
