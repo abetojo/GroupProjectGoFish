@@ -74,21 +74,20 @@ public class Player extends Deck {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Which card would you like to ask for?");
         String card = scanner.nextLine();
-        System.out.println(card);
-
         return card;
     }
 
     public String giveCard(String card) {
         if (this.getHand().contains(card)) {
+            int index = this.getHand().indexOf(card);
+            this.getHand().remove(index);
             return card;
-        } else {
-            return "You must Go Fish";
         }
+        return "Card not in hand!";
     }
 
-    public String goFish() {
-        String card = pullCard();
+    public String goFish(Deck deck) {
+        String card = deck.getDeck().get(0);
         return card;
     }
 }

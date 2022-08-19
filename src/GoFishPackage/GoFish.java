@@ -15,7 +15,7 @@ public abstract class GoFish extends Player {
     public void nextTurn() {
         // TODO===========================
     }
-
+/* 
     public Player declareWinner(Player user, Player cpu) {
         if (goFish() == null) {
             if (user.getNumSets() > cpu.getNumSets()) {
@@ -24,4 +24,5 @@ public abstract class GoFish extends Player {
         }
         return cpu;
     }
+*/
 }
