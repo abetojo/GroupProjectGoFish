@@ -29,35 +29,37 @@ public class Deck {
         deck = new ArrayList<String>();
         System.out.println("Building the deck");
 
-        for (int i = 0; i <= 52; i++) {
-            if (i <= 4) {
+        for (int i = 0; i <= 53; i++) {
+            if (i < 5) {
                 this.deck.add("Ace");
-            } else if (i <= 8) {
+            } else if (i < 9) {
                 this.deck.add("Two");
-            } else if (i <= 12) {
+            } else if (i < 13) {
                 this.deck.add("Three");
-            } else if (i <= 16) {
+            } else if (i < 17) {
                 this.deck.add("Four");
-            } else if (i <= 20) {
+            } else if (i < 21) {
                 this.deck.add("Five");
-            } else if (i <= 24) {
+            } else if (i < 25) {
                 this.deck.add("Six");
-            } else if (i <= 28) {
+            } else if (i < 29) {
                 this.deck.add("Seven");
-            } else if (i <= 32) {
+            } else if (i < 33) {
                 this.deck.add("Eight");
-            } else if (i <= 36) {
+            } else if (i < 37) {
                 this.deck.add("Nine");
-            } else if (i <= 40) {
+            } else if (i < 41) {
                 this.deck.add("Ten");
-            } else if (i <= 44) {
+            } else if (i < 45) {
                 this.deck.add("Jack");
-            } else if (i <= 48) {
+            } else if (i < 49) {
                 this.deck.add("Queen");
-            } else if (i <= 52) {
+            } else if (i < 53) {
                 this.deck.add("King");
-            } else {
+            } else if (i == 53) {
                 System.out.println("The Deck has been made");
+            } else {
+                break;
             }
         }
     }
