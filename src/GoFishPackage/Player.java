@@ -63,7 +63,7 @@ public class Player extends Deck {
 
     public void setOpeningHand(Deck deck) {
         hand = new ArrayList<String>();
-        for (int i = 0; i <= 7; i++) {
+        for (int i = 0; i < 7; i++) {
             String card = deck.getDeck().get(0).toString();
             deck.getDeck().remove(0);
             this.hand.add(card);
