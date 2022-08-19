@@ -72,7 +72,7 @@ public class Driver {
         String card2 = cpu.askUserForCard();
         for (int i = 0; i < cpu.getHand().size(); i++) {
             if (card2.equals(cpu.getHand().get(i))) {
-                System.out.println("you had the card! A " + card2 + " card has been added to thier hand");
+                System.out.println("You had the card! A " + card2 + " card has been added to thier hand");
                 String newCpuCard = user.giveCard(card2);
                 if(newCpuCard != null) {
                     cpu.getHand().add(newCpuCard);
