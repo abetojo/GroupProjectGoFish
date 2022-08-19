@@ -74,6 +74,8 @@ public class Player extends Deck {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Which card would you like to ask for?");
         String card = scanner.nextLine();
+        System.out.println(card);
+
         return card;
     }
 

@@ -30,23 +30,17 @@ public class Driver {
         //** needs fixing (only grabs index, not string)
         user.setOpeningHand(deck);
         cpu.setOpeningHand(deck);
+
+        System.out.println("Your hand is:" + user.getHand());
+        System.out.println("CPU hand is: " + cpu.getHand());
         
-        //**User asks cpu for card
-        String askCpu = user.askForCard();
-        //If the player does not have the card, they tell the user to Go Fish.
-        user.giveCard(askCpu);
-        
-        //**Same thing here for cpu
-        String askUser = cpu.askForCard();
-        cpu.giveCard(askUser);
-        
-        
-        //**Declares the winner
-        fish.declareWinner(user, cpu);
-        
-        //** unsure how to make a setFour method work for deck class
-        //** may need to make if statements inside methods for setFour()
-        //                      ** for removing the cards or not
+        while(!deck.getDeck().isEmpty()) {
+            System.out.println("Ask your opponent for a card");
+            
+
+
+
+        }   
         
 
     }

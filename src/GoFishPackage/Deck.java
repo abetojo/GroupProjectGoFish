@@ -78,8 +78,8 @@ public class Deck {
     }
 
     public String pullCard() {
-        if (deck.get(0) != null) {
-            String card = deck.get(0);
+        if (this.deck.get(0) != null) {
+            String card = this.deck.get(0);
             deck.remove(0);
             return card;
         }
