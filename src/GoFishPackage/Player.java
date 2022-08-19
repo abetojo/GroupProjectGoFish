@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package GoFishPackage;
 
 import java.util.ArrayList;
@@ -53,12 +49,12 @@ public class Player extends Deck {
 
     public void setOfFour(String card) {
         int setTracker = 0;
-        for(int i = 0; i < hand.size(); i++) {
-            if(card.equals(hand.get(i))) {
+        for (int i = 0; i < hand.size(); i++) {
+            if (card.equals(hand.get(i))) {
                 setTracker++;
             }
         }
-        if(setTracker == 4) {
+        if (setTracker == 4) {
             hand.removeAll(Collections.singleton(card));
             numSets++;
             System.out.println("You have a set of 4!");
