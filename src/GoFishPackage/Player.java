@@ -49,8 +49,19 @@ public class Player extends Deck {
         this.cardNum = cardNum;
     }
 
-    public int setOfFour(int numSets) {
-        return numSets;
+    public String setOfFour(String card) {
+        int setTracker = 0;
+        for(int i = 0; i < hand.size(); i++) {
+            if(card.equals(hand.get(i))) {
+                setTracker++;
+            }
+        }
+        if(setTracker == 4) {
+            return card;
+        }
+        else {
+            return null;
+        }
     }
 
     public int getNumSets() {

@@ -50,6 +50,7 @@ public class Driver {
                     break;
                 } 
             }
+            
         if(hadCard == 0) {
             System.out.println("The CPU doesn't have the card, you need to go Fish!");
             String newCard = user.goFish(deck);
@@ -58,7 +59,7 @@ public class Driver {
             System.out.println("An " + newCard + " Card has been added to your hand");
             System.out.println("YOUR NEW HAND:" + user.getHand());
         }
-
+        hadCard = 0;
         
 
 
