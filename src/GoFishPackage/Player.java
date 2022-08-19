@@ -19,10 +19,10 @@ public class Player extends Deck {
 
     public Player(String name, ArrayList<String> hand,
             String cardNum, int numSets) {
-        setName(name);
-        setHand(hand);
-        setCardNum(cardNum);
-        setNumSets(numSets);
+        this.name = name;
+        this.hand = hand;
+        this.cardNum = cardNum;
+        this.numSets = numSets;
     }
 
     public String getName() {
@@ -61,11 +61,12 @@ public class Player extends Deck {
         this.numSets = numSets;
     }
 
-    public void setOpeningHand(ArrayList<String> hand) {
+    public void setOpeningHand(Deck deck) {
+        hand = new ArrayList<String>();
         for (int i = 0; i <= 7; i++) {
-            String card = deck.get(i);
-            deck.remove(i);
-            hand.add(card);
+            String card = deck.getDeck().get(0).toString();
+            deck.getDeck().remove(0);
+            this.hand.add(card);
         }
     }
 

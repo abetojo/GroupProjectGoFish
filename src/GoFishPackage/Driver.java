@@ -27,8 +27,8 @@ public class Driver {
         cpu.setName("Player");
 
         //** needs fixing (only grabs index, not string)
-        user.setOpeningHand(deck.getDeck());
-        cpu.setOpeningHand(deck.getDeck());
+        user.setOpeningHand(deck);
+        cpu.setOpeningHand(deck);
         
         //**User asks cpu for card
         String askCpu = user.askForCard();
