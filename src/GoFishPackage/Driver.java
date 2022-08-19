@@ -92,6 +92,15 @@ public class Driver {
         hadCard = 0;
         }
         
+        if(cpu.getNumSets() > user.getNumSets()){
+            System.out.println("The Cpu has won the game!!!");
+            }
+        else if(cpu.getNumSets() == user.getNumSets()){
+            System.out.println("The game has ended in a draw!!!");
+        }
+        else{
+            System.out.print("Congratulations " + userName + " you have won the game!!!!");
+        }
         
     }
 
