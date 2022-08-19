@@ -71,8 +71,8 @@ public class Driver {
         System.out.println("The Cpu will now ask you for a card");
         String card2 = cpu.askUserForCard();
         for (int i = 0; i < cpu.getHand().size(); i++) {
-            if (card.equals(cpu.getHand().get(i))) {
-                System.out.println("you had the card! A " + card + " card has been added to thier hand");
+            if (card2.equals(cpu.getHand().get(i))) {
+                System.out.println("you had the card! A " + card2 + " card has been added to thier hand");
                 String newCpuCard = user.giveCard(card2);
                 if(newCpuCard != null) {
                     cpu.getHand().add(newCpuCard);
@@ -96,7 +96,9 @@ public class Driver {
         }
         hadCard = 0;
         }
-        
+
+
+        //Declare Winner
         if(cpu.getNumSets() > user.getNumSets()){
             System.out.println("The Cpu has won the game!!!");
             }
