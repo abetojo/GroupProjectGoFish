@@ -24,7 +24,6 @@ public class Driver {
         cpu.setOpeningHand(deck);
 
         System.out.println("\nYOUR HAND:" + user.getHand());
-        System.out.println("CPU HAND: " + cpu.getHand());
 
         int hadCard = 0;
 
@@ -79,7 +78,6 @@ public class Driver {
                         cpu.getHand().add(newCpuCard);
                         cpu.setOfFour(newCpuCard);
                     }
-                    System.out.println("\nCPU HAND:" + cpu.getHand());
                     System.out.println("YOUR HAND:" + user.getHand());
                     hadCard = 1;
                     break;
@@ -92,10 +90,6 @@ public class Driver {
                 String newCard = cpu.goFish(deck);
                 deck.getDeck().remove(0);
                 cpu.getHand().add(newCard);
-                System.out.println("\nA " + newCard 
-                        + " Card has been added to the CPU's hand");
-                // test to show the cpu hand while in development
-                System.out.println("\nCPU HAND:" + cpu.getHand());
                 cpu.setOfFour(newCard);
             }
             hadCard = 0;
