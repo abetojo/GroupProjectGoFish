@@ -40,7 +40,6 @@ public class Driver {
                         user.getHand().add(newUserCard);
                         user.setOfFour(newUserCard);
                     }
-                    System.out.println("\nCPU HAND:" + cpu.getHand());
                     System.out.println("YOUR HAND:" + user.getHand() + "\n");
                     hadCard = 1;
                     break;
