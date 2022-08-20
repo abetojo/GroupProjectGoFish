@@ -72,14 +72,4 @@ public class Deck {
         deck.clear();
         buildDeck();
     }
-
-    public String pullCard() {
-        if (this.deck.get(0) != null) {
-            String card = this.deck.get(0);
-            deck.remove(0);
-            return card;
-        }
-        System.out.println("No cards left in the Deck");
-        return null;
-    }
 }
